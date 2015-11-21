@@ -1,0 +1,10 @@
+{
+  "name": "di3",
+  "version": "0.0.1",
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "jquery": "~2.1.4",
+    "components-font-awesome": "~4.4.0",
+    "bootstrap-css": "~3.3.4"
+  }
+}
