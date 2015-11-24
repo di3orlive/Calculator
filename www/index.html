@@ -14,8 +14,76 @@
 </head>
 <body>
 
-    <div class="di3Cal"></div>
-    <div class="di3Cal"></div>
+
+    <script id="di3Calc" type="text/x-handlebars-template">
+        <div class="di3Calc">
+            <header class="calc-header">
+                <div class="calc-header-left">
+                    <div class="item"><button class="btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-bars"></i></button></div>
+                    <div class="item"><button class="btn toggleBtn" ><i class="fa fa-arrow-circle-o-left"></i></button></div>
+                    <div class="item"><button class="btn"><i class="fa fa-undo"></i></button> <span>RAD</span></div>
+                </div>
+                <div class="calc-header-right">
+                    <div class="result"></div>
+                    <div class="calcAll"></div>
+                </div>
+            </header>
+
+            <section class="calc-body">
+                <article class="calc-body-calcBox">
+                    <div class="calc-history"></div>
+                    <div class="edit"><button class="btn">Edit</button></div>
+                </article>
+                <article class="calc-body-mathFunc">
+                    {{#each mathFunc}}
+                    <div class="item"><button class="{{btnClassName}}" data-set="{{set}}">{{operand}}</button></div>
+                    {{/each}}
+                </article>
+                <article class="calc-body-calcBtn">
+                    {{#each calcBtnArr}}
+                    <div class="item"><button class="{{btnClassName}}" data-set="{{set}}">{{operand}}</button></div>
+                    {{/each}}
+                </article>
+            </section>
+        </div>
+
+        <div class="di3Calc">
+            <header class="calc-header">
+                <div class="calc-header-left">
+                    <div class="item"><button class="btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-bars"></i></button></div>
+                    <div class="item"><button class="btn toggleBtn" ><i class="fa fa-arrow-circle-o-left"></i></button></div>
+                    <div class="item"><button class="btn"><i class="fa fa-undo"></i></button> <span>RAD</span></div>
+                </div>
+                <div class="calc-header-right">
+                    <div class="result"></div>
+                    <div class="calcAll"></div>
+                </div>
+            </header>
+
+            <section class="calc-body">
+                <article class="calc-body-calcBox">
+                    <div class="calc-history"></div>
+                    <div class="edit"><button class="btn">Edit</button></div>
+                </article>
+                <article class="calc-body-mathFunc">
+                    {{#each mathFunc}}
+                    <div class="item"><button class="{{btnClassName}}" data-set="{{set}}">{{operand}}</button></div>
+                    {{/each}}
+                </article>
+                <article class="calc-body-calcBtn">
+                    {{#each calcBtnArr}}
+                    <div class="item"><button class="{{btnClassName}}" data-set="{{set}}">{{operand}}</button></div>
+                    {{/each}}
+                </article>
+            </section>
+        </div>
+    </script>
+
+
+
+
+
+
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -37,6 +105,7 @@
     <!-- bower:js -->
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/bootstrap-css/js/bootstrap.min.js"></script>
+    <script src="bower/handlebars/handlebars.js"></script>
     <!-- endbower -->
     <script src="js/main.js"></script>
 </body>
